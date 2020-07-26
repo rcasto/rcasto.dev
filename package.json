@@ -9,8 +9,8 @@
     "deploy": "gcloud config set project rcasto-dev && gcloud app deploy app.yaml"
   },
   "engines": {
-    "node": "^14",
-    "npm": "^6"
+    "node": "12.x",
+    "npm": "6.x"
   },
   "author": "Richie Casto (https://github.com/rcasto)",
   "license": "MIT",
