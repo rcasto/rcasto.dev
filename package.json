@@ -5,7 +5,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "deploy": "gcloud config set project rcasto-dev && gcloud app deploy app.yaml"
   },
   "engines": {
     "node": "^14",
