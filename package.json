@@ -7,6 +7,10 @@
   "scripts": {
     "start": "node server.js"
   },
+  "engines": {
+    "node": "^14",
+    "npm": "^6"
+  },
   "author": "Richie Casto (https://github.com/rcasto)",
   "license": "MIT",
   "dependencies": {
