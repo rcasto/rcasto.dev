@@ -1,0 +1,34 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.construction-warning {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    color: #9F6000;
+    background-color: #FEEFB3;
+    padding: 6px;
+}
+
+html, body, main {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #F1E8DC;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main img {
+    border-radius: 50%;
+}
