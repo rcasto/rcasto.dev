@@ -1,0 +1,16 @@
+{
+  "name": "rcasto.dev",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Richie Casto (https://github.com/rcasto)",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "3.1.3",
+    "express": "4.17.1"
+  }
+}
