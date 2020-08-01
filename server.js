@@ -18,6 +18,14 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/favicon.ico', (req, res) => {
+    res.sendStatus(204);
+});
+
+app.get('*', (req, res) => {
+    res.redirect('/');
+});
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
