@@ -19,6 +19,13 @@ main {
     justify-content: center;
 }
 
+main * {
+    margin-bottom: 12px;
+}
+main *:last-child {
+    margin-bottom: 0;
+}
+
 main img {
     border-radius: 50%;
     max-width: 100%;
