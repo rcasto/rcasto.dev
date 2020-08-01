@@ -22,4 +22,9 @@ main {
 main img {
     border-radius: 50%;
     max-width: 100%;
+    transition: linear transform 2s;
+    transform: rotate(0deg);
+}
+main img:hover, main img:active {
+    transform: rotate(360deg);
 }
