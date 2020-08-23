@@ -1,22 +1,31 @@
 import 'social-contact';
 
-const audioElems = document.querySelectorAll('audio');
-const profileImg = document.querySelector('img');
+const profileImage = document.querySelector('img');
+const rotationMatrixCssVariable = '--rotation-matrix';
 
-let playingAudioElem = null;
+function generateRandomBit() {
+    return Math.round(Math.random());
+}
 
-profileImg.addEventListener('mouseenter', () => {
-    const randomAudioIndex = Math.floor(Math.random() * audioElems.length);
+function generateRandomRotationMatrix() {
+    return `${generateRandomBit()}, ${generateRandomBit()}, ${generateRandomBit()}`;
+}
 
-    playingAudioElem = audioElems[randomAudioIndex];
-    playingAudioElem.play();
-});
+function generateNewRotationMatrix(currentRotationMatrix) {
+    let newRotationMatrix = currentRotationMatrix;
 
-profileImg.addEventListener('mouseleave', () => {
-    if (!playingAudioElem) {
-        return;
+    while (newRotationMatrix === currentRotationMatrix) {
+        newRotationMatrix = generateRandomRotationMatrix();
     }
 
-    playingAudioElem.pause();
-    playingAudioElem.currentTime = 0;
-});
+    return newRotationMatrix;;
+}
+
+function onAnimationIteration() {
+    const currentRotationMatrix = getComputedStyle(profileImage)
+        .getPropertyValue(rotationMatrixCssVariable);
+    profileImage.style
+        .setProperty(rotationMatrixCssVariable, generateNewRotationMatrix(currentRotationMatrix));
+}
+
+profileImage.addEventListener('animationiteration', onAnimationIteration);

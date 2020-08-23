@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --rotation-matrix: 1, 1, 0;
+}
+
 html, body, main {
     height: 100%;
 }
@@ -38,6 +42,6 @@ main img:hover, main img:active {
 }
 
 @keyframes rotation-3d {
-    from { transform: rotate3d(0deg); }
-    to   { transform: rotate3d(1, 1, 0, 360deg); }
+    from { transform: rotate3d(0); }
+    to   { transform: rotate3d(var(--rotation-matrix), 360deg); }
 }
