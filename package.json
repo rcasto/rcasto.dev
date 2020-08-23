@@ -5,9 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "webpack --config webpack.config.js --mode production",
+    "dev": "npm-run-all clean --parallel start build:dev",
+    "build": "npm-run-all clean build:prod",
+    "build:dev": "webpack --config webpack.config.js --mode development --watch",
+    "build:prod": "webpack --config webpack.config.js --mode production",
     "clean": "rimraf dist",
-    "prepublishOnly": "npm run build",
     "deploy": "gcloud config set project rcasto-dev && gcloud app deploy app.yaml"
   },
   "engines": {
