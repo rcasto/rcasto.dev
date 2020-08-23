@@ -21,12 +21,12 @@
     "ejs": "3.1.5",
     "express": "4.17.1",
     "helmet": "4.1.0",
-    "rimraf": "^3.0.2",
-    "social-contact": "file:social-contact-1.0.8.tgz"
+    "social-contact": "1.0.9"
   },
   "devDependencies": {
     "copy-webpack-plugin": "6.0.3",
     "webpack": "4.44.1",
-    "webpack-cli": "3.3.12"
+    "webpack-cli": "3.3.12",
+    "rimraf": "3.0.2"
   }
 }
