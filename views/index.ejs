@@ -11,10 +11,23 @@
 </head>
 
 <body>
+    <!-- <header>
+        <div>
+            <h1>rcasto.dev</h1>
+            <span>A dev who loves the web</span>
+        </div>
+    </header> -->
     <main>
-        <img src="/images/me.jpg" alt="Just a picture of me">
-        <social-contact github="rcasto" linkedin="rcasto"></social-contact>
-        <a href="https://cupandpen.com" target="_blank">Cup & Pen - Another little site of mine</a>
+        <div>
+            <img src="/images/me.jpg" alt="Just a picture of me">
+            <social-contact github="rcasto" linkedin="rcasto"></social-contact>
+        </div>
+
+        <div id="projects">
+            <% projects.forEach(function(project){ %>
+                <%- include('partials/project.ejs', project); %>
+            <% }) %>
+        </div>
     </main>
 
     <script async src="/scripts/index.js"></script>

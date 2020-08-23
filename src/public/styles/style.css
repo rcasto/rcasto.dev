@@ -41,6 +41,18 @@ main img:hover, main img:active {
     animation: 3s linear infinite running rotation-3d;
 }
 
+.see-projects {
+    margin-bottom: 0;
+}
+
+#projects {
+
+}
+#projects .project {
+    border: 1px solid black;
+    padding: 12px;
+}
+
 @keyframes rotation-3d {
     from { transform: rotate3d(0); }
     to   { transform: rotate3d(var(--rotation-matrix), 360deg); }
