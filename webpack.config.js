@@ -10,7 +10,6 @@ module.exports = {
     plugins: [
         new CopyPlugin({
             patterns: [
-                { from: 'src/public/audio', to: 'public/audio' },
                 { from: 'src/public/images', to: 'public/images' },
                 { from: 'src/public/styles', to: 'public/styles' },
                 { from: 'src/public/sitemap.xml', to: 'public/sitemap.xml' },
