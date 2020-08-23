@@ -1,4 +1,5 @@
 import 'social-contact';
+import '../styles/style.css';
 
 const profileImage = document.querySelector('img');
 const rotationMatrixCssVariable = '--rotation-matrix';
