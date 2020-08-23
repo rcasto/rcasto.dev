@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "npm-run-all build start:server",
+    "start:server": "node server.js",
     "dev": "npm-run-all clean --parallel start build:dev",
     "build": "npm-run-all clean build:prod",
     "build:dev": "webpack --config webpack.config.js --mode development --watch",
