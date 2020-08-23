@@ -9,7 +9,9 @@ const port = process.env.PORT || 3000;
 app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: false,
+}));
 app.use(compression());
 app.use(express.static(path.resolve(__dirname, 'dist/public')));
 
