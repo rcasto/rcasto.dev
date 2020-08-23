@@ -22,28 +22,7 @@
     <audio src="/audio/dj-scratch-2.mp3"></audio>
 
     <script async src="https://cdn.jsdelivr.net/npm/social-contact@1.0.8/dist/socialcontact.min.js"></script>
-    <script async>
-        const audioElems = document.querySelectorAll('audio');
-        const profileImg = document.querySelector('img');
-
-        let playingAudioElem = null;
-
-        profileImg.addEventListener('mouseenter', () => {
-            const randomAudioIndex = Math.floor(Math.random() * audioElems.length);
-
-            playingAudioElem = audioElems[randomAudioIndex];
-            playingAudioElem.play();
-        });
-
-        profileImg.addEventListener('mouseleave', () => {
-            if (!playingAudioElem) {
-                return;
-            }
-
-            playingAudioElem.pause();
-            playingAudioElem.currentTime = 0;
-        });
-    </script>
+    <script async src="/scripts/index.js"></script>
 </body>
 
 </html>
