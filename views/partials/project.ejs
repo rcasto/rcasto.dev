@@ -5,13 +5,7 @@
     <div>
         <%= description %>
     </div>
-    <% if (links.website) { %>
-        <a href="<%= links.website %>" target="_blank">Website</h2>
-    <% } %>
-    <% if (links.github) { %>
-        <a href="<%= links.github %>" target="_blank">GitHub</h2>
-    <% } %>
-    <% if (links.codepen) { %>
-        <a href="<%= links.codepen %>" target="_blank">Codepen</h2>
-    <% } %>
+    <% links.forEach(function(link){ %>
+        <a href="<%= link.href %>" target="_blank"><%= link.text %></a>
+    <% }) %>
 </article>
