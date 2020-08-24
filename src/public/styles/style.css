@@ -6,13 +6,9 @@
     --rotation-matrix: 1, 1, 0;
 }
 
-html, body, main {
-    height: 100%;
-}
-
 body {
     padding: 0;
-    margin: 0;
+    margin: 12px 0;
     background-color: #F1E8DC;
 }
 
@@ -20,7 +16,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
 main * {
@@ -46,11 +41,25 @@ main img:hover, main img:active {
 }
 
 #projects {
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 #projects .project {
     border: 1px solid black;
+    border-radius: 6px;
     padding: 12px;
+}
+/* #projects .project:hover {
+    -webkit-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.75);
+} */
+#projects .project .project-header {
+    margin-top: 0;
+}
+#projects .project .project-links {
+    display: flex;
+    flex-direction: column;
 }
 
 @keyframes rotation-3d {

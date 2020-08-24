@@ -1,11 +1,13 @@
 <article class="project">
-    <h2>
+    <h2 class="project-header">
         <%= name %>
     </h2>
     <div>
         <%= description %>
     </div>
-    <% links.forEach(function(link){ %>
-        <a href="<%= link.href %>" target="_blank"><%= link.text %></a>
-    <% }) %>
+    <div class="project-links">
+        <% links.forEach(function(link){ %>
+            <a href="<%= link.href %>" target="_blank"><%= link.text %></a>
+        <% }) %>
+    </div>
 </article>

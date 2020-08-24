@@ -1,6 +1,6 @@
 const adaptiveHtml = {
     name: 'adaptive-html',
-    description: 'HTML to Adaptive Card JSON converter library',
+    description: 'HTML to Adaptive Card JSON converter library. Mainly targeted at working with the output of WYSIWYG editors.',
     links: [{
         text: 'Website',
         href: 'https://adaptive-editor.appspot.com/'
