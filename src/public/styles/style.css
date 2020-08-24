@@ -18,13 +18,6 @@ main {
     align-items: center;
 }
 
-main * {
-    margin-bottom: 12px;
-}
-main *:last-child {
-    margin-bottom: 0;
-}
-
 main img {
     border-radius: 50%;
     max-width: 100%;
@@ -41,13 +34,16 @@ main img:hover, main img:active {
 }
 
 #projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 #projects .project {
+    margin: 6px;
     border: 1px solid black;
     border-radius: 6px;
     padding: 12px;
+    max-width: 160px;
 }
 /* #projects .project:hover {
     -webkit-box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.75);
@@ -55,11 +51,20 @@ main img:hover, main img:active {
     box-shadow: 0px 0px 3px 3px rgba(0,0,0,0.75);
 } */
 #projects .project .project-header {
-    margin-top: 0;
+    margin: 0 0 12px 0;
+}
+#projects .project .project-description {
+    margin-bottom: 12px;
 }
 #projects .project .project-links {
     display: flex;
     flex-direction: column;
+}
+#projects .project .project-links a {
+    margin-bottom: 6px;
+}
+#projects .project .project-links a:last-of-type {
+    margin-bottom: 0;
 }
 
 @keyframes rotation-3d {
