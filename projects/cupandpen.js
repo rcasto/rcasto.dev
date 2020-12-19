@@ -4,6 +4,9 @@ const cupandpen = {
     links: [{
         text: 'Website',
         href: 'https://cupandpen.com'
+    }, {
+        text: 'GitHub',
+        href: 'https://github.com/rcasto/cupandpen'
     }]
 };
 
