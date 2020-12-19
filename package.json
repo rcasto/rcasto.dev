@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "http-server dist/public",
-    "dev": "npm-run-all clean --parallel start build:dev",
-    "build": "npm-run-all clean build:prod",
+    "dev": "npm-run-all clean --parallel start build:dev build:view",
+    "build": "npm-run-all clean build:prod build:view",
     "build:dev": "webpack --config webpack.config.js --mode development --watch",
     "build:prod": "webpack --config webpack.config.js --mode production",
+    "build:view": "node scripts/buildView.js",
     "clean": "rimraf dist"
   },
   "engines": {
