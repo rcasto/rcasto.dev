@@ -6,7 +6,7 @@ const projects = require('../projects/index');
 
 const writeFilePromise = util.promisify(fs.writeFile);
 
-const indexOutputPath = path.resolve('dist/public');
+const indexOutputPath = path.resolve('docs');
 const indexView = path.resolve('views/index.ejs');
 
 async function renderView(viewPath, data) {

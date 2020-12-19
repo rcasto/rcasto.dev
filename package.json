@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "http-server dist/public",
+    "start": "http-server docs",
     "dev": "npm-run-all clean --parallel start build:dev build:view",
     "build": "npm-run-all clean build:prod build:view",
     "build:dev": "webpack --config webpack.config.js --mode development --watch",
