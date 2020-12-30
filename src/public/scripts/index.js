@@ -1,3 +1,4 @@
+import { createEventGenerator } from 'simple-track';
 import 'social-contact';
 import '../styles/style.css';
 
@@ -10,7 +11,7 @@ const eventTypes = {
     pageView: 'page-view',
 };
 
-const eventGenerator = window.SimpleTrack.createEventGenerator({
+const eventGenerator = createEventGenerator({
     appName,
     analyticsApiUrl,
 });
