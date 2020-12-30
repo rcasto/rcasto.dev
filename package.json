@@ -30,7 +30,7 @@
     "rimraf": "3.0.2",
     "social-contact": "1.0.9",
     "style-loader": "2.0.0",
-    "webpack": "5.11.0",
-    "webpack-cli": "4.2.0"
+    "webpack": "5.11.1",
+    "webpack-cli": "4.3.0"
   }
 }
