@@ -10,15 +10,13 @@ async function renderView(viewPath, data) {
     return await ejs.renderFile(viewPath, data);
 }
 
-if (!fs.existsSync(indexOutputPath)) {
-    fs.mkdirSync(indexOutputPath, {
+fs.promises.access(indexOutputPath)
+    .catch(() => fs.promises.mkdir(indexOutputPath, {
         recursive: true,
-    });
-}
-
-renderView(indexView, {
-    projects,
-})
-.then(view => fs.promises.writeFile(`${indexOutputPath}/index.html`, view))
-.then(() => console.log('View built and written successfully!'))
-.catch(err => console.error(err));
+    }))
+    .then(() => renderView(indexView, {
+        projects,
+    }))
+    .then(view => fs.promises.writeFile(`${indexOutputPath}/index.html`, view))
+    .then(() => console.log('View built and written successfully!'))
+    .catch(err => console.error(err));
