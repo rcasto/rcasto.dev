@@ -6,6 +6,7 @@ const covid19 = require('./covid19-report');
 const seeds4tracks = require('./seeds4tracks');
 const ablab = require('./ablab');
 const edits = require('./edits');
+const imagePixelator = require('./image-pixelator');
 
 module.exports = [
     cupandpen,
@@ -16,4 +17,5 @@ module.exports = [
     seeds4tracks,
     ablab,
     edits,
+    imagePixelator,
 ];
