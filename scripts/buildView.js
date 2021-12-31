@@ -3,7 +3,7 @@ const ejs = require('ejs');
 const fs = require('fs');
 const projects = require('../projects/index');
 
-const indexOutputPath = path.resolve('docs');
+const indexOutputPath = path.resolve('public');
 const indexView = path.resolve('views/index.ejs');
 
 async function renderView(viewPath, data) {

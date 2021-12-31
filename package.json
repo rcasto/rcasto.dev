@@ -5,12 +5,12 @@
   "main": "server.js",
   "scripts": {
     "start": "npm-run-all --parallel start:*",
-    "start:server": "http-server docs",
+    "start:server": "http-server public",
     "start:dev": "npm-run-all clean watch:view",
     "build": "npm-run-all clean build:view",
     "build:view": "node scripts/buildView.js",
     "watch:view": "chokidar 'views/**/*.ejs' 'projects/*.js' -c 'npm run build:view' --initial",
-    "clean": "rimraf docs/index.html"
+    "clean": "rimraf public/index.html"
   },
   "engines": {
     "node": "16.x",
