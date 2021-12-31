@@ -1,0 +1,74 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --rotation-matrix: 1, 1, 0;
+}
+
+body {
+    padding: 0;
+    margin: 12px 0;
+    background-color: #F1E8DC;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main img {
+    border-radius: 50%;
+    max-width: 100%;
+    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+}
+main img:hover, main img:active {
+    animation: 3s linear infinite running rotation-3d;
+}
+
+.see-projects {
+    margin-bottom: 0;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+#projects .project {
+    margin: 6px;
+    border: 1px solid black;
+    border-radius: 6px;
+    padding: 12px;
+    max-width: 160px;
+}
+#projects:hover .project, #projects:active .project {
+    opacity: 0.3;
+}
+#projects .project:hover, #projects .project:active {
+    opacity: 1;
+}
+#projects .project .project-header {
+    margin: 0 0 12px 0;
+}
+#projects .project .project-description {
+    margin-bottom: 12px;
+}
+#projects .project .project-links {
+    display: flex;
+    flex-direction: column;
+}
+#projects .project .project-links a {
+    margin-bottom: 6px;
+}
+#projects .project .project-links a:last-of-type {
+    margin-bottom: 0;
+}
+
+@keyframes rotation-3d {
+    from { transform: rotate3d(0); }
+    to   { transform: rotate3d(var(--rotation-matrix), 360deg); }
+}
