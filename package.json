@@ -13,8 +13,8 @@
     "clean": "rimraf public/index.html"
   },
   "engines": {
-    "node": "16.x",
-    "npm": "8.x"
+    "node": "16.x.x",
+    "npm": "8.x.x"
   },
   "author": "Richie Casto (https://github.com/rcasto)",
   "license": "MIT",
