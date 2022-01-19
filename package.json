@@ -10,7 +10,8 @@
     "build": "npm-run-all clean build:view",
     "build:view": "ts-node scripts/buildView.ts",
     "watch:view": "chokidar 'views/**/*.ejs' 'projects/*.ts' -c 'npm run build:view' --initial",
-    "clean": "rimraf public/index.html"
+    "clean": "rimraf public/index.html",
+    "new": "npx ts-node scripts/generateProjectTemplate.ts"
   },
   "engines": {
     "node": "16.x.x",
