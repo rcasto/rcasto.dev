@@ -1,4 +1,6 @@
-const seeds4tracks = {
+import { IProject } from "../scripts/schemas";
+
+export const seeds4tracks: IProject = {
     name: 'seeds4tracks',
     description: 'Input your favorite artists, output tracks you might like. Uses the Spotify API under the hood.',
     links: [{
@@ -9,5 +11,3 @@ const seeds4tracks = {
         href: 'https://github.com/rcasto/seeds4tracks'
     }]
 };
-
-module.exports = seeds4tracks;

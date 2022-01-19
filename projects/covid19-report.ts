@@ -1,4 +1,6 @@
-const covid19 = {
+import { IProject } from "../scripts/schemas";
+
+export const covid19: IProject = {
     name: 'covid19-report',
     description: 'Daily updates on total covid-19 cases using data provided by Johns Hopkins CSSE. Get a glance quickly at the number of cases that are near you.',
     links: [{
@@ -9,5 +11,3 @@ const covid19 = {
         href: 'https://github.com/rcasto/covid19-report'
     }]
 };
-
-module.exports = covid19;

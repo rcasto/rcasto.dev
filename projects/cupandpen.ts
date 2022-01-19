@@ -1,4 +1,6 @@
-const cupandpen = {
+import { IProject } from "../scripts/schemas";
+
+export const cupandpen: IProject = {
     name: 'cupandpen',
     description: 'A little site where I write stuff and blabber, so ya know a little blog site.',
     links: [{
@@ -9,5 +11,3 @@ const cupandpen = {
         href: 'https://github.com/rcasto/cupandpen'
     }]
 };
-
-module.exports = cupandpen;

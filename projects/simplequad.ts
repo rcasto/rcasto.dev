@@ -1,4 +1,6 @@
-const simplequad = {
+import { IProject } from "../scripts/schemas";
+
+export const simplequad: IProject = {
     name: 'simplequad',
     description: 'A simple quadtree implementation useful for 2D collision detection and more.',
     links: [{
@@ -12,5 +14,3 @@ const simplequad = {
         href: 'https://github.com/rcasto/simplequad'
     }]
 };
-
-module.exports = simplequad;
