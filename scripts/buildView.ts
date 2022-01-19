@@ -1,7 +1,12 @@
-const path = require('path');
-const ejs = require('ejs');
-const fs = require('fs');
-const projects = require('../projects/index');
+// const path = require('path');
+// const ejs = require('ejs');
+// const fs = require('fs');
+// const projects = require('../projects/index');
+
+import path from 'path';
+import ejs from 'ejs';
+import fs from 'fs';
+import projects from '../projects';
 
 const indexOutputPath = path.resolve('public');
 const indexView = path.resolve('views/index.ejs');
