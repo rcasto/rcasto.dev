@@ -1,4 +1,6 @@
-const ablab = {
+import { IProject } from "../scripts/schemas";
+
+export const ablab: IProject = {
     name: 'ablab',
     description: 'A simple library for enabling experimentation. Primarily offering experiment bucketing and a defined schema for experiments using a JSON based config.',
     links: [{
@@ -9,5 +11,3 @@ const ablab = {
         href: 'https://github.com/rcasto/ablab'
     }]
 };
-
-module.exports = ablab;

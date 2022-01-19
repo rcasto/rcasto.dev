@@ -1,4 +1,6 @@
-const adaptiveHtml = {
+import { IProject } from "../scripts/schemas";
+
+export const adaptiveHtml: IProject = {
     name: 'adaptive-html',
     description: 'HTML to Adaptive Card JSON converter library. Mainly targeted at working with the output of WYSIWYG editors.',
     links: [{
@@ -9,5 +11,3 @@ const adaptiveHtml = {
         href: 'https://github.com/rcasto/adaptive-html'
     }]
 };
-
-module.exports = adaptiveHtml;

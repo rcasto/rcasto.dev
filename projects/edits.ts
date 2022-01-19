@@ -1,4 +1,6 @@
-const edits = {
+import { IProject } from "../scripts/schemas";
+
+export const edits: IProject = {
     name: 'edits',
     description: 'A little library to calculate the edit distance between 2 strings, and allow returning the edit record path, transforming string1 to string2.',
     links: [{
@@ -9,5 +11,3 @@ const edits = {
         href: 'https://github.com/rcasto/edits'
     }]
 };
-
-module.exports = edits;

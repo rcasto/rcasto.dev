@@ -1,4 +1,6 @@
-const imagePixelator = {
+import { IProject } from "../scripts/schemas";
+
+export const imagePixelator: IProject = {
     name: 'Image-Pixelator',
     description: 'An older for fun project that pixelates and attempts to add depth to 2d images.',
     links: [{
@@ -9,5 +11,3 @@ const imagePixelator = {
         href: 'https://github.com/rcasto/Image-Pixelator'
     }]
 };
-
-module.exports = imagePixelator;
