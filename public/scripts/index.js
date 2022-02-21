@@ -2,7 +2,7 @@ const profileImage = document.querySelector('img');
 const rotationMatrixCssVariable = '--rotation-matrix';
 
 const appName = 'rcasto-dev';
-const analyticsApiUrl = 'https://analytics-service-299521.ue.r.appspot.com/analytics';
+const analyticsApiUrl = 'https://project-analytics.fly.dev/analytics';
 const eventTypes = {
     pageView: 'page-view',
 };
