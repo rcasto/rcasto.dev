@@ -44,13 +44,14 @@ main img:hover, main img:active {
     border-radius: 6px;
     padding: 12px;
     max-width: 160px;
+    transition: transform 0.2s;
 }
-/* #projects:hover .project, #projects:active .project {
-    opacity: 0.3;
-} */
-/* #projects .project:hover, #projects .project:active {
-    opacity: 1;
-} */
+#projects:hover .project, #projects:active .project {
+    transform: scale(0.9);
+}
+#projects .project:hover, #projects .project:active {
+    transform: scale(1.1);
+}
 #projects .project .project-header {
     margin: 0 0 12px 0;
 }
