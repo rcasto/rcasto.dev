@@ -12,25 +12,39 @@ body {
     background-color: #F1E8DC;
 }
 
-main {
+main, header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-main img {
+.profile-image {
     border-radius: 50%;
     max-width: 100%;
     -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
 }
-main img:hover, main img:active {
+.profile-image:hover, .profile-image:active {
     animation: 3s linear infinite running rotation-3d;
 }
 
-.see-projects {
-    margin-bottom: 0;
+.social-buttons {
+    display: flex;
+    margin: 24px;
+}
+.social-buttons .social-buttons-button {
+    margin-right: 24px;
+    transition: transform 0.2s;
+}
+.social-buttons .social-buttons-button:last-of-type {
+    margin-right: 0;
+}
+.social-buttons .social-buttons-button:hover, .social-buttons .social-buttons-button:active {
+    transform: scale(1.1);
+}
+.social-buttons .social-buttons-button .social-buttons-button-image {
+    height: 48px;
 }
 
 #projects {
@@ -39,7 +53,7 @@ main img:hover, main img:active {
     justify-content: space-evenly;
 }
 #projects .project {
-    margin: 6px;
+    margin: 12px;
     border: 1px solid black;
     border-radius: 6px;
     padding: 12px;

@@ -13,20 +13,9 @@
 </head>
 
 <body>
-    <main>
-        <div>
-            <img src="/images/me.jpg" alt="Just a picture of me">
-            <social-contact github="rcasto" linkedin="rcasto"></social-contact>
-        </div>
+    <%- appHtml %>
 
-        <div id="projects">
-            <% projects.forEach(function(project){ %>
-                <%- include('partials/project.ejs', project); %>
-            <% }) %>
-        </div>
-    </main>
-
-    <script async src="https://cdn.jsdelivr.net/npm/social-contact@1.0.9/dist/socialcontact.min.js"></script>
+    <!-- <script async src="https://cdn.jsdelivr.net/npm/social-contact@1.0.9/dist/socialcontact.min.js"></script> -->
     <script defer src="https://cdn.jsdelivr.net/npm/simple-track@1.1.1/dist/index.umd.min.js"></script>
     <script defer src="/scripts/index.js"></script>
 </body>
