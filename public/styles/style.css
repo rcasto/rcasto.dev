@@ -6,7 +6,13 @@
     --rotation-matrix: 1, 1, 0;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
+    display: flex;
+    flex-direction: column;
     padding: 0;
     margin: 0;
     background-color: #EFE7BC;
@@ -20,6 +26,10 @@ main, header {
 
 header {
     background-color: #74BDCB;
+}
+
+main {
+    flex-grow: 1;
 }
 
 .profile-image {
@@ -54,6 +64,8 @@ header {
 #projects {
     display: flex;
     flex-wrap: wrap;
+    flex-grow: 1;
+    align-items: center;
     justify-content: space-evenly;
 }
 #projects .project {
