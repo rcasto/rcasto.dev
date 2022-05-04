@@ -8,14 +8,18 @@
 
 body {
     padding: 0;
-    margin: 12px 0;
-    background-color: #F1E8DC;
+    margin: 0;
+    background-color: #EFE7BC;
 }
 
 main, header {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+header {
+    background-color: #74BDCB;
 }
 
 .profile-image {
@@ -54,7 +58,8 @@ main, header {
 }
 #projects .project {
     margin: 12px;
-    border: 1px solid black;
+    border: 3px solid #FFA384;
+    background-color: #E7F2F8;
     border-radius: 6px;
     padding: 12px;
     max-width: 160px;
