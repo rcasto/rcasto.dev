@@ -1,0 +1,19 @@
+version: '3'
+services:
+
+  rcasto.dev:
+    container_name: rcasto.dev
+    # command: npm start
+    build:
+      context: ./
+      target: development
+    ports: 
+      - '3000:3000'
+    volumes:
+      - .:/app
+      # ignore local node_modules, use container
+      - /app/node_modules
+    # env_file: .env.development
+    environment:
+      NODE_ENV: development
+      SHELL: /bin/bash
