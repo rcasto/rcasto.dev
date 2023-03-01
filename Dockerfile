@@ -1,8 +1,7 @@
 # https://blog.logrocket.com/node-js-docker-improve-dx/
 
-# Use the official lightweight Node.js 14 image.
 # https://hub.docker.com/_/node
-FROM node:18 as base
+FROM node:18.14.2 as base
 # Create and change to the app directory.
 WORKDIR /app
 # Copy application dependency manifests to the container image.
