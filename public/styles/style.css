@@ -15,29 +15,62 @@ body {
     flex-direction: column;
     padding: 0;
     margin: 0;
-    background-color: #EFE7BC;
+    background-color: #f2f2f2;
 }
 
-main, header {
+.app-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    height: 64px;
+    padding: 12px;
+    border-bottom: 4px solid #020202;
+}
+.app-header .app-header-left {
+    display: flex;
+}
+.app-header .app-header-right {
+    margin-left: auto;
+}
+
+.app-main {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-header {
-    background-color: #74BDCB;
-}
-
-main {
     flex-grow: 1;
+    align-items: center;
+    overflow-y: auto;
+    padding-bottom: 12px;
+}
+
+.app-footer {
+    display: flex;
+    flex-shrink: 0;
+    height: 48px;
+    align-items: center;
+    margin-top: auto;
+    border-top: 4px solid #020202;
+}
+.app-footer * {
+    margin-left: auto;
+}
+
+.app-main .app-main-plug {
+    text-align: center;
+    margin: 12px 0;
+}
+.app-main #projects {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
 }
 
 .profile-image {
     border-radius: 50%;
     max-width: 100%;
-    -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    /* -webkit-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 12px 6px rgba(0,0,0,0.75); */
 }
 .profile-image:hover, .profile-image:active {
     animation: 3s linear infinite running rotation-3d;
@@ -61,7 +94,26 @@ main {
     height: 48px;
 }
 
-#projects {
+.expandable-details {
+    border: 1px solid #020202;
+    margin-bottom: 6px;
+}
+.expandable-details :last-of-type {
+    margin-bottom: 0;
+}
+.expandable-details .expandable-details-summary {
+    /* list-style: none; */
+    padding: 12px;
+}
+.expandable-details .expandable-details-content {
+    padding: 12px;
+    border-top: none;
+}
+.expandable-details[open] .expandable-details-content {
+    border-top: 1px solid black;
+}
+
+/* #projects {
     display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
@@ -98,7 +150,14 @@ main {
 }
 #projects .project .project-links a:last-of-type {
     margin-bottom: 0;
+} */
+
+/* .expandable-details .expandable-details-content {
+    display: none;
 }
+.expandable-details[open] .expandable-details-content {
+    display: block;
+} */
 
 @keyframes rotation-3d {
     from { transform: rotate3d(0); }

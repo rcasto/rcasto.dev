@@ -42,6 +42,6 @@ window.addEventListener('load', () => {
         url: window.location.href,
     };
 
-    eventGenerator.track(eventTypes.pageView, pageViewEventData);
+    // eventGenerator.track(eventTypes.pageView, pageViewEventData);
     profileImage.addEventListener('animationiteration', onAnimationIteration);
 });

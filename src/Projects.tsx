@@ -1,5 +1,6 @@
 import React from 'react';
 import { IProject } from '../scripts/schemas';
+import { Expandable } from './Expandable';
 import { Project } from './Project';
 
 interface IProps {
@@ -12,7 +13,9 @@ export function Projects({
     return (
         <div id='projects'>
             {projects.map(project => (
-                <Project key={project.name} project={project} />
+                <Expandable key={project.name} title={project.name}>
+                    <Project project={project} />
+                </Expandable>
             ))}
         </div>
     );
