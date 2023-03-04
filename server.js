@@ -10,6 +10,9 @@ const port = parseInt(process.env.PORT, 10) || 3000;
 //     next();
 // });
 app.use(express.static('public'));
+app.use((req, res) => {
+    res.redirect('/');
+});
 
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
