@@ -12,7 +12,9 @@
     "build:view": "ts-node scripts/buildView.tsx",
     "watch:view": "chokidar 'views/**/*.ejs' 'projects/*.ts' 'src/*.tsx' -c 'npm run build:view' --initial",
     "clean": "rimraf public/index.html",
-    "new": "npx ts-node scripts/generateProjectTemplate.ts"
+    "new": "npx ts-node scripts/generateProjectTemplate.ts",
+    "deploy": "npm-run-all build deploy:flyio",
+    "deploy:flyio": "fly deploy"
   },
   "engines": {
     "node": "18.x.x",
