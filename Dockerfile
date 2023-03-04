@@ -16,7 +16,8 @@ ENV NODE_ENV=production
 RUN npm ci --only=production
 # RUN npm install --only=production
 # Copy local code to the container image.
-COPY . ./
+COPY public/ ./public/
+COPY server.js ./server.js
 # Run the web service on container startup.
 CMD [ "node", "server.js" ]
 
