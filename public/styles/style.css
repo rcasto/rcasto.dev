@@ -31,6 +31,17 @@ body {
 }
 .app-header .app-header-right {
     margin-left: auto;
+    display: flex;
+}
+.app-header a {
+    display: flex;
+    margin-right: 12px;
+}
+.app-header a:last-of-type {
+    margin-right: 0;
+}
+.app-header a img {
+    height: 48px;
 }
 
 .app-main {
@@ -96,10 +107,11 @@ body {
 
 .expandable-details {
     border: 1px solid #020202;
-    margin-bottom: 6px;
-}
-.expandable-details :last-of-type {
+    border-bottom-width: 0;
     margin-bottom: 0;
+}
+.expandable-details:last-of-type {
+    border-bottom-width: 1px;
 }
 .expandable-details .expandable-details-summary {
     /* list-style: none; */
