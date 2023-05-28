@@ -133,7 +133,12 @@ ul {
 .project-links {
     display: flex;
     flex-direction: column;
+    margin-top: 12px;
 }
+/* .project-links a {
+    flex-grow: 1;
+    text-align: center;
+} */
 
 /* #projects {
     display: flex;
