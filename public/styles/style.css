@@ -18,9 +18,16 @@ body {
     background-color: #f2f2f2;
 }
 
-ul {
+ul#projects {
     list-style: none;
     padding: 0;
+    margin: 0;
+}
+ul#projects li {
+    margin-bottom: 6px;
+}
+ul#projects li:last-of-type {
+    margin-bottom: 0;
 }
 
 .app-header {
