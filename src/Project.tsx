@@ -10,9 +10,6 @@ export function Project({
 }: IProps) {
     return (
         <article className='project'>
-            {/* <h2 className='project-header'>
-                {project.name}
-            </h2> */}
             <div className='project-description'>
                 {project.description}
             </div>

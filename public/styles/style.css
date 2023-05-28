@@ -18,6 +18,11 @@ body {
     background-color: #f2f2f2;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
 .app-header {
     display: flex;
     flex-shrink: 0;
@@ -59,7 +64,7 @@ body {
     height: 48px;
     align-items: center;
     margin-top: auto;
-    border-top: 4px solid #020202;
+    /* border-top: 4px solid #020202; */
 }
 .app-footer * {
     margin-left: auto;
@@ -123,6 +128,11 @@ body {
 }
 .expandable-details[open] .expandable-details-content {
     border-top: 1px solid black;
+}
+
+.project-links {
+    display: flex;
+    flex-direction: column;
 }
 
 /* #projects {

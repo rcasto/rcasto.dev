@@ -11,12 +11,14 @@ export function Projects({
     projects,
 }: IProps) {
     return (
-        <div id='projects'>
+        <ul id='projects'>
             {projects.map(project => (
-                <Expandable key={project.name} title={project.name}>
-                    <Project project={project} />
-                </Expandable>
+                <li key={project.name}>
+                    <Expandable title={project.name}>
+                        <Project project={project} />
+                    </Expandable>
+                </li>
             ))}
-        </div>
+        </ul>
     );
 }
