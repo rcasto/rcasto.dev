@@ -11,13 +11,13 @@ import { edits } from './edits';
 import { imagePixelator } from './image-pixelator';
 
 export const projects: IProject[] = [
-    cupandpen,
     adaptiveHtml,
     simplequad,
-    OneFitBus,
     covid19,
-    seeds4tracks,
     ablab,
     edits,
+    OneFitBus,
+    cupandpen,
+    seeds4tracks,
     imagePixelator,
 ];
