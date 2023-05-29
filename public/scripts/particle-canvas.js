@@ -29,8 +29,8 @@ function createParticle() {
   const { x, y } = getRandomPosition(0, 0, canvas.width, canvas.height);
   const radius = getRandomInt(0, 3);
   const particle = {
-    update() {},
-    draw() {
+    update(timestamp) {},
+    draw(timestamp) {
       context.save();
       context.beginPath()
       context.arc(x, y, radius, 0, 2 * Math.PI);
@@ -52,8 +52,8 @@ function animate(timestamp) {
   context.clearRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach((p) => {
-    p.update();
-    p.draw();
+    p.update(timestamp);
+    p.draw(timestamp);
   });
 }
 

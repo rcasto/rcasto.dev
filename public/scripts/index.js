@@ -7,10 +7,10 @@ const eventTypes = {
     pageView: 'page-view',
 };
 
-const eventGenerator = window.SimpleTrack.createEventGenerator({
-    appName,
-    analyticsApiUrl,
-});
+// const eventGenerator = window.SimpleTrack.createEventGenerator({
+//     appName,
+//     analyticsApiUrl,
+// });
 
 function generateRandomBit() {
     return Math.round(Math.random());
