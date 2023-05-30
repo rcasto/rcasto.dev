@@ -82,6 +82,8 @@ ul#projects li:last-of-type {
 
 .app-main .app-main-plug {
     text-align: center;
+    background-color: var(--content-background-color);
+    padding: 12px;
     margin: 12px 0;
 }
 .app-main #projects {
