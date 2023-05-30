@@ -136,6 +136,12 @@ ul#projects li:last-of-type {
     flex-direction: column;
     margin-top: 12px;
 }
+.project-links a {
+    margin-bottom: 6px;
+}
+.project-links a:last-of-type {
+    margin-bottom: 0;
+}
 
 @keyframes rotation-3d {
     from { transform: rotate3d(0); }
