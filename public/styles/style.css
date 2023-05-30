@@ -123,11 +123,7 @@ ul#projects li:last-of-type {
 
 .expandable-details {
     border: 4px solid var(--border-color);
-    border-bottom-width: 0;
     margin-bottom: 0;
-}
-.expandable-details:last-of-type {
-    border-bottom-width: 1px;
 }
 .expandable-details .expandable-details-summary {
     padding: 12px;
