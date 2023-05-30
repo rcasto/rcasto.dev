@@ -48,6 +48,7 @@ ul#projects li:last-of-type {
 }
 .app-header .app-header-left {
     display: flex;
+    align-items: center;
 }
 .app-header .app-header-right {
     margin-left: auto;
@@ -63,6 +64,12 @@ ul#projects li:last-of-type {
 .app-header a img {
     height: 48px;
 }
+
+@media (max-width: 480px) {
+    .app-header h1 {
+        visibility: hidden;
+    }
+}  
 
 .app-main {
     display: flex;
@@ -87,6 +94,8 @@ ul#projects li:last-of-type {
 .profile-image {
     border-radius: 50%;
     max-width: 100%;
+    height: 48px;
+    margin-right: 6px;
 }
 .profile-image:hover, .profile-image:active {
     animation: 3s linear infinite running rotation-3d;
@@ -135,6 +144,12 @@ ul#projects li:last-of-type {
     display: flex;
     flex-direction: column;
     margin-top: 12px;
+}
+.project-links a {
+    margin-bottom: 6px;
+}
+.project-links a:last-of-type {
+    margin-bottom: 0;
 }
 
 @keyframes rotation-3d {
