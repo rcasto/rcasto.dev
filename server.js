@@ -2,6 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 const { randomUUID } = require('node:crypto')
 const cookieParser = require('cookie-parser')
+const helmet = require('helmet')
 
 const app = express();
 const port = parseInt(process.env.PORT, 10) || 3001;
@@ -62,6 +63,7 @@ function trackPageView(req, res) {
     })
 }
 
+app.use(helmet())
 app.use(cookieParser())
 app.use((req, res, next) => {
     if (req.path === '/' && req.method === 'GET') {
