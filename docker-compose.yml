@@ -8,7 +8,7 @@ services:
       context: ./
       target: development
     ports: 
-      - '3000:3000'
+      - '3001:3001'
     volumes:
       - .:/app
       # ignore local node_modules, use container
@@ -17,3 +17,4 @@ services:
     environment:
       NODE_ENV: development
       SHELL: /bin/bash
+      ANALYTICS_API_URL: http://host.docker.internal:3000/analytics
