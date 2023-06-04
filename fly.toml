@@ -8,6 +8,7 @@ processes = []
 [env]
   PORT=8080
   NODE_ENV="production"
+  ANALYTICS_API_URL="https://project-analytics.fly.dev/analytics"
 
 [build]
   build-target = "production"
