@@ -2,15 +2,15 @@ const profileImage = document.querySelector('img');
 const rotationMatrixCssVariable = '--rotation-matrix';
 
 const appName = 'rcasto-dev';
-const analyticsApiUrl = 'https://project-analytics.fly.dev/analytics';
+const analyticsApiUrl = '/api/analytics';
 const eventTypes = {
     pageView: 'page-view',
 };
 
-// const eventGenerator = window.SimpleTrack.createEventGenerator({
-//     appName,
-//     analyticsApiUrl,
-// });
+const eventGenerator = window.SimpleTrack.createEventGenerator({
+    appName,
+    analyticsApiUrl,
+});
 
 function generateRandomBit() {
     return Math.round(Math.random());
@@ -42,6 +42,6 @@ window.addEventListener('load', () => {
         url: window.location.href,
     };
 
-    // eventGenerator.track(eventTypes.pageView, pageViewEventData);
+    eventGenerator.track(eventTypes.pageView, pageViewEventData);
     profileImage.addEventListener('animationiteration', onAnimationIteration);
 });
