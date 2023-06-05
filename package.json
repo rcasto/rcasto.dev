@@ -7,14 +7,11 @@
     "start": "npm-run-all --parallel start:*",
     "start:server": "nodemon server.js",
     "start:dev": "npm-run-all clean watch:view",
-    "start-docker": "docker-compose up --detach --build",
     "build": "npm-run-all clean build:view",
     "build:view": "ts-node scripts/buildView.tsx",
     "watch:view": "chokidar 'views/**/*.ejs' 'projects/*.ts' 'src/*.tsx' -c 'npm run build:view' --initial",
     "clean": "rimraf public/index.html",
-    "new": "npx ts-node scripts/generateProjectTemplate.ts",
-    "deploy": "npm-run-all build deploy:flyio",
-    "deploy:flyio": "fly deploy"
+    "new": "npx ts-node scripts/generateProjectTemplate.ts"
   },
   "engines": {
     "node": "18.x.x",
@@ -37,9 +34,5 @@
     "typescript": "4.9.5"
   },
   "dependencies": {
-    "cookie-parser": "1.4.6",
-    "express": "4.18.2",
-    "helmet": "7.0.0",
-    "node-fetch": "2.6.11"
   }
 }
