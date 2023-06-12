@@ -14,7 +14,13 @@ export function App({
         <>
             <Header />
             <main className='app-main'>
-                <p className='app-main-plug'>I like building tools, libraries, and more generally things that enable and just maybe, inspire people in some way. Cheeky, but hey, its possible</p>
+                <div className='app-main-plug'>
+                    <p>Welcome to my little slice of the internet!</p>
+                    <p>
+                        I'm a dev who likes the web and building tools that aim to enable or make things easier for folks.
+                        This site primarily serves as medium to collect links to my projects and socials. Take a look around and let me know what you think!
+                    </p>
+                </div>
                 <Projects projects={projects} />
             </main>
         </>
