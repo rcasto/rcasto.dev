@@ -1,7 +1,7 @@
 import React from 'react';
 import { IProject } from '../scripts/schemas';
-import { Expandable } from './Expandable';
 import { Project } from './Project';
+import { Card } from './Card';
 
 interface IProps {
     projects: IProject[];
@@ -14,9 +14,9 @@ export function Projects({
         <ul id='projects'>
             {projects.map(project => (
                 <li key={project.name}>
-                    <Expandable title={project.name}>
+                    <Card header={project.name}>
                         <Project project={project} />
-                    </Expandable>
+                    </Card>
                 </li>
             ))}
         </ul>
