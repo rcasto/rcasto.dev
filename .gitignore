@@ -1,2 +1,4 @@
 node_modules
 public/index.html
+public/scripts/index.min.js
+public/styles/index.min.css

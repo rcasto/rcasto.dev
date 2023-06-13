@@ -6,9 +6,11 @@
   "scripts": {
     "start": "npm-run-all --parallel start:*",
     "start:server": "http-server --port 3000 ./public",
-    "start:dev": "npm-run-all clean watch:view",
-    "build": "npm-run-all clean build:view",
+    "start:dev": "NODE_ENV=development npm-run-all clean watch:view",
+    "build": "npm-run-all clean --parallel build:view build:js build:css",
     "build:view": "ts-node scripts/buildView.tsx",
+    "build:js": "minify public/scripts/index.js > public/scripts/index.min.js",
+    "build:css": "minify public/styles/index.css > public/styles/index.min.css",
     "watch:view": "chokidar 'views/**/*.ejs' 'projects/*.ts' 'src/*.tsx' -c 'npm run build:view' --initial",
     "clean": "rimraf public/index.html",
     "new": "npx ts-node scripts/generateProjectTemplate.ts"
@@ -26,6 +28,7 @@
     "chokidar-cli": "3.0.0",
     "ejs": "3.1.8",
     "http-server": "14.1.1",
+    "minify": "10.2.0",
     "npm-run-all": "4.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
