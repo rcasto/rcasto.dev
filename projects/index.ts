@@ -9,6 +9,7 @@ import { seeds4tracks } from './seeds4tracks';
 import { ablab } from './ablab';
 import { edits } from './edits';
 import { imagePixelator } from './image-pixelator';
+import { peerPass } from './peer-pass';
 
 export const projects: IProject[] = [
     adaptiveHtml,
@@ -17,6 +18,7 @@ export const projects: IProject[] = [
     ablab,
     edits,
     OneFitBus,
+    peerPass,
     cupandpen,
     seeds4tracks,
     imagePixelator,
