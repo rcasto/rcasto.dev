@@ -7,6 +7,7 @@
     "start": "npm-run-all --parallel start:*",
     "start:server": "http-server --port 3000 ./public",
     "start:dev": "NODE_ENV=development npm-run-all clean watch:view",
+    "prod": "npm-run-all build start:server",
     "build": "npm-run-all clean --parallel build:view build:js build:css",
     "build:view": "ts-node scripts/buildView.tsx",
     "build:js": "minify public/scripts/index.js > public/scripts/index.min.js",
