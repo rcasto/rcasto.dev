@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>A dev who loves the web | rcasto.dev</title>
-    <meta name="description"
-        content="A dev who loves the web, welcome to my site! Mainly glue for linking out to my projects and providing a little intro and context about me. Anyway cheers!">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta
+      name="description"
+      content="A dev who loves the web, welcome to my site! Mainly glue for linking out to my projects and providing a little intro and context about me. Anyway cheers!"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <% if (process.env.NODE_ENV === 'development') { %>
-        <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/index.css" />
     <% } else { %>
-        <link rel="stylesheet" href="/styles/index.min.css">
+    <link rel="stylesheet" href="/styles/index.min.css" />
     <% } %>
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-</head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon-16x16.png"
+    />
+  </head>
 
-<body>
+  <body>
     <%- appHtml %>
 
+    <!-- <script defer src="https://unpkg.com/simplequad@2.0.0/dist/simplequad.umd.min.js"></script> -->
     <!-- <script defer src="/scripts/particle-canvas.js"></script> -->
-    <script defer src="https://cdn.jsdelivr.net/npm/simple-track@1.2.0/dist/index.umd.min.js"></script>
-    <% if (process.env.NODE_ENV === 'development') { %>
-        <script defer src="/scripts/index.js"></script>
-    <% } else { %>
-        <script defer src="/scripts/index.min.js"></script>
-    <% } %>
-</body>
 
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/simple-track@1.2.0/dist/index.umd.min.js"
+    ></script>
+    <% if (process.env.NODE_ENV === 'development') { %>
+    <script defer src="/scripts/index.js"></script>
+    <% } else { %>
+    <script defer src="/scripts/index.min.js"></script>
+    <% } %>
+  </body>
 </html>

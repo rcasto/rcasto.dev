@@ -1,23 +1,19 @@
-import React from 'react';
-import { IProject } from '../scripts/schemas';
-import { Header } from './Header';
-import { Projects } from './Projects';
-import { Blurb } from './Blurb';
+import React from "react";
+import { IProject } from "../scripts/schemas";
+// import { Blurb } from "./Blurb";
+import { Profile } from "./Profile";
 
 interface IProps {
-    projects: IProject[];
+  projects: IProject[];
 }
 
-export function App({
-    projects,
-}: IProps) {
-    return (
-        <>
-            <Header />
-            <main className='app-main'>
-                <Blurb />
-                <Projects projects={projects} />
-            </main>
-        </>
-    );
+export function App({ projects }: IProps) {
+  return (
+    <>
+      <main>
+        <Profile />
+        {/* <Blurb /> */}
+      </main>
+    </>
+  );
 }
