@@ -82,7 +82,8 @@ main ul li a img {
 }
 
 .profile-image-container {
-  animation: 6s linear infinite running box-shadow-pulse;
+  animation: 8s linear infinite running box-shadow-pulse;
+  animation-delay: 1s;
   border-radius: 50%;
   margin: 2rem;
 }
@@ -110,12 +111,12 @@ main ul li a img {
 
 @keyframes box-shadow-pulse {
   0% {
-    box-shadow: 0px 0px 512px 512px var(--profile-image-box-shadow-color);
-  }
-  50% {
     box-shadow: none;
   }
-  100% {
+  50% {
     box-shadow: 0px 0px 512px 512px var(--profile-image-box-shadow-color);
+  }
+  100% {
+    box-shadow: none;
   }
 }
