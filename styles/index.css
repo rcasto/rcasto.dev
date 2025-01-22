@@ -82,7 +82,7 @@ main ul li a img {
 }
 
 .profile-image-container {
-  animation: 8s linear infinite running box-shadow-pulse;
+  /* animation: 8s linear infinite running box-shadow-pulse; */
   animation-delay: 1s;
   border-radius: 50%;
   margin: 2rem;
@@ -109,7 +109,7 @@ main ul li a img {
   }
 }
 
-@keyframes box-shadow-pulse {
+/* @keyframes box-shadow-pulse {
   0% {
     box-shadow: none;
   }
@@ -118,5 +118,49 @@ main ul li a img {
   }
   100% {
     box-shadow: none;
+  }
+} */
+
+/* .scroll-to-projects {
+  display: flex;
+  font-size: 2.5rem;
+} */
+
+.ball {
+  position: absolute;
+  background-color: transparent;
+  border-radius: 50%;
+  z-index: -1;
+  animation: 12s linear infinite running scale;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+}
+
+.ball-r {
+  top: 25%;
+  left: 50%;
+  box-shadow: 0px 0px 48px 24px red;
+}
+.ball-g {
+  left: 25%;
+  top: 75%;
+  box-shadow: 0px 0px 48px 24px green;
+}
+.ball-b {
+  top: 75%;
+  right: 25%;
+  box-shadow: 0px 0px 48px 24px blue;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(10);
+  }
+  80%,
+  100% {
+    transform: scale(0);
   }
 }
