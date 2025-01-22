@@ -12,21 +12,33 @@ export function Profile() {
       </div>
       <ul>
         <li>
-          <a href="https://github.com/rcasto" target="_blank">
-            {/* GitHub */}
-            <img src="/images/github.svg" alt="GitHub profile link" />
+          <a
+            href="https://github.com/rcasto"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub profile"
+          >
+            <img src="/images/github.svg" aria-hidden="true" alt="" />
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/rcasto" target="_blank">
-            {/* LinkedIn */}
-            <img src="/images/linkedin.png" alt="LinkedIn profile link" />
+          <a
+            href="https://www.linkedin.com/in/rcasto"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn profile"
+          >
+            <img src="/images/linkedin.png" aria-hidden="true" alt="" />
           </a>
         </li>
         <li>
-          <a href="mailto:me@rcasto.dev" target="_blank">
-            {/* Contact */}
-            <img src="/images/envelope.svg" alt="Contact via email" />
+          <a
+            href="mailto:me@rcasto.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contact via email"
+          >
+            <img src="/images/envelope.svg" aria-hidden="true" alt="" />
           </a>
         </li>
       </ul>
