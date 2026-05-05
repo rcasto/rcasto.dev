@@ -10,6 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <meta property="og:title" content="A dev who loves the web | rcasto.dev" />
+    <meta property="og:description" content="A dev who loves the web, welcome to my site! Mainly glue for linking out to my projects and providing a little intro and context about me. Anyway cheers!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rcasto.dev" />
+    <meta property="og:image" content="https://rcasto.dev/images/apple-touch-icon.png" />
+    <meta name="twitter:card" content="summary" />
+
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    </script>
+
     <% if (process.env.NODE_ENV === 'development') { %>
     <link rel="stylesheet" href="/styles/index.css" />
     <% } else { %>
@@ -37,8 +50,10 @@
   <body>
     <%- appHtml %>
 
-    <!-- <script defer src="https://unpkg.com/simplequad@2.0.0/dist/simplequad.umd.min.js"></script> -->
-    <!-- <script defer src="/scripts/particle-canvas.js"></script> -->
+    <script defer src="https://unpkg.com/simplequad@3.1.0/dist/simplequad.umd.js"></script>
+    <!-- <script defer src="/scripts/simplequad.umd.js"></script> -->
+    <script defer src="/scripts/theme.js"></script>
+    <script defer src="/scripts/particle-canvas.js"></script>
 
     <script
       defer

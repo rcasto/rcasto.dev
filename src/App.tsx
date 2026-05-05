@@ -14,9 +14,11 @@ export function App({ projects }: IProps) {
       <main>
         <Profile />
 
-        <div className="ball ball-r"></div>
-        <div className="ball ball-g"></div>
-        <div className="ball ball-b"></div>
+        {/* <div className="ball-container">
+          <div className="ball ball-r"></div>
+          <div className="ball ball-g"></div>
+          <div className="ball ball-b"></div>
+        </div> */}
 
         {/* <div className="scroll-to-projects">&#8595;</div> */}
       </main>
