@@ -50,19 +50,19 @@
   <body>
     <%- appHtml %>
 
-    <script defer src="https://unpkg.com/simplequad@3.1.0/dist/simplequad.umd.js"></script>
+    <script defer src="https://unpkg.com/simplequad@3.2.0/dist/simplequad.umd.js"></script>
     <!-- <script defer src="/scripts/simplequad.umd.js"></script> -->
     <script defer src="/scripts/theme.js"></script>
     <script defer src="/scripts/particle-canvas.js"></script>
 
-    <script
+    <!-- <script
       defer
       src="https://cdn.jsdelivr.net/npm/simple-track@1.2.0/dist/index.umd.min.js"
-    ></script>
-    <% if (process.env.NODE_ENV === 'development') { %>
+    ></script> -->
+    <!-- <% if (process.env.NODE_ENV === 'development') { %>
     <script defer src="/scripts/index.js"></script>
     <% } else { %>
     <script defer src="/scripts/index.min.js"></script>
-    <% } %>
+    <% } %> -->
   </body>
 </html>

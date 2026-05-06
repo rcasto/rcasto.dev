@@ -59,7 +59,10 @@ body {
   z-index: 10;
   padding: 0;
   line-height: 1;
-  transition: transform 0.3s, background-color 0.4s, border-color 0.4s;
+  transition:
+    transform 0.3s,
+    background-color 0.4s,
+    border-color 0.4s;
 }
 
 .theme-toggle:hover {
@@ -138,10 +141,10 @@ main ul li a img {
   height: 256px;
   width: 256px;
 }
-.profile-image:hover,
+/* .profile-image:hover,
 .profile-image:active {
   animation: 3s linear infinite running rotation-3d;
-}
+} */
 
 @keyframes rotation-3d {
   from {

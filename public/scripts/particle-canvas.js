@@ -124,7 +124,26 @@ function buildObstacles() {
     const rect = linksBar.getBoundingClientRect();
     obstacles.push({
       isStatic: true,
-      bound: { x: rect.left, y: rect.top, width: rect.width, height: rect.height },
+      bound: {
+        x: rect.left,
+        y: rect.top,
+        width: rect.width,
+        height: rect.height,
+      },
+    });
+  }
+
+  // theme toggle button is circular — represent as a circle
+  const themeToggle = document.querySelector(".theme-toggle");
+  if (themeToggle) {
+    const rect = themeToggle.getBoundingClientRect();
+    obstacles.push({
+      isStatic: true,
+      bound: {
+        x: rect.left + rect.width / 2,
+        y: rect.top + rect.height / 2,
+        r: rect.width / 2,
+      },
     });
   }
 }
@@ -209,7 +228,8 @@ function animate(timestamp) {
       const distSq = dx * dx + dy * dy;
       if (distSq < radiusSq && distSq > 0) {
         const dist = Math.sqrt(distSq);
-        const force = MOUSE_REPULSION_STRENGTH * (1 - dist / MOUSE_REPULSION_RADIUS);
+        const force =
+          MOUSE_REPULSION_STRENGTH * (1 - dist / MOUSE_REPULSION_RADIUS);
         p.velocity.x += (dx / dist) * force * deltaTimestamp;
         p.velocity.y += (dy / dist) * force * deltaTimestamp;
       }
@@ -223,11 +243,16 @@ function animate(timestamp) {
 
   // Debug grid: only in dark mode — becomes part of the "lights off" aesthetic
   if (document.documentElement.dataset.theme === "dark") {
-    // TODO: enable when embedded in published simplequad package
-    // window.SimpleQuad.drawDebug(quadTree, context, {
-    //   strokeStyle: "rgba(74, 200, 236, 0.12)",
-    //   lineWidth: 0.5,
-    // });
+    window.SimpleQuad.drawDebug(quadTree, context, {
+      strokeStyle: "rgba(74, 200, 236, 0.12)",
+      lineWidth: 0.5,
+    });
+  } else {
+    // try it in light mode too
+    window.SimpleQuad.drawDebug(quadTree, context, {
+      strokeStyle: "rgba(158, 90, 21, 0.12)",
+      lineWidth: 0.5,
+    });
   }
 }
 
