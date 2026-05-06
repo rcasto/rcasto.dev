@@ -10,6 +10,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <meta property="og:title" content="A dev who loves the web | rcasto.dev" />
+    <meta property="og:description" content="A dev who loves the web, welcome to my site! Mainly glue for linking out to my projects and providing a little intro and context about me. Anyway cheers!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rcasto.dev" />
+    <meta property="og:image" content="https://rcasto.dev/images/apple-touch-icon.png" />
+    <meta name="twitter:card" content="summary" />
+
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    </script>
+
     
     <link rel="stylesheet" href="/styles/index.min.css" />
     
@@ -33,17 +46,19 @@
   </head>
 
   <body>
-    <main><div class="profile-container"><div class="profile-image-container"><img class="profile-image" src="/images/me-min.jpg" alt="Just a picture of me"/></div><ul><li><a href="https://github.com/rcasto" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><img src="/images/github.svg" aria-hidden="true" alt=""/></a></li><li><a href="https://www.linkedin.com/in/rcasto" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><img src="/images/linkedin.png" aria-hidden="true" alt=""/></a></li><li><a href="mailto:me@rcasto.dev" target="_blank" rel="noopener noreferrer" aria-label="Contact via email"><img src="/images/envelope.svg" aria-hidden="true" alt=""/></a></li></ul></div><div class="ball ball-r"></div><div class="ball ball-g"></div><div class="ball ball-b"></div></main>
+    <link rel="preload" as="image" href="/images/me-min.jpg"/><link rel="preload" as="image" href="/images/github.svg"/><link rel="preload" as="image" href="/images/linkedin.png"/><link rel="preload" as="image" href="/images/envelope.svg"/><main><div class="profile-container"><div class="profile-image-container"><img class="profile-image" src="/images/me-min.jpg" alt="Just a picture of me"/></div><ul><li><a href="https://github.com/rcasto" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><img src="/images/github.svg" aria-hidden="true" alt=""/></a></li><li><a href="https://www.linkedin.com/in/rcasto" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><img src="/images/linkedin.png" aria-hidden="true" alt=""/></a></li><li><a href="mailto:me@rcasto.dev" target="_blank" rel="noopener noreferrer" aria-label="Contact via email"><img src="/images/envelope.svg" aria-hidden="true" alt=""/></a></li></ul></div></main>
 
-    <!-- <script defer src="https://unpkg.com/simplequad@2.0.0/dist/simplequad.umd.min.js"></script> -->
-    <!-- <script defer src="/scripts/particle-canvas.js"></script> -->
+    <script defer src="https://unpkg.com/simplequad@3.2.0/dist/simplequad.umd.js"></script>
+    <!-- <script defer src="/scripts/simplequad.umd.js"></script> -->
+    <script defer src="/scripts/theme.js"></script>
+    <script defer src="/scripts/particle-canvas.js"></script>
 
-    <script
+    <!-- <script
       defer
       src="https://cdn.jsdelivr.net/npm/simple-track@1.2.0/dist/index.umd.min.js"
-    ></script>
-    
+    ></script> -->
+    <!-- 
     <script defer src="/scripts/index.min.js"></script>
-    
+     -->
   </body>
 </html>
